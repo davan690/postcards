@@ -13,4 +13,5 @@ test_that("Templates can be created.", {
   expect_true(test_template("trestles"))
   expect_true(test_template("onofre"))
   expect_true(test_template("solana"))
+  expect_true(test_template("shiftr"))
 })

@@ -20,6 +20,7 @@
 #' postcards::create_postcard(template = "trestles")
 #' postcards::create_postcard(template = "onofre")
 #' postcards::create_postcard(template = "solana")
+#' postcards::create_postcard(template = "shiftr")
 #' }
 create_postcard <- function(file = "index.Rmd",
                             template = "jolla",
@@ -38,10 +39,10 @@ create_postcard <- function(file = "index.Rmd",
   if(create_image) {
     img_table <- as.list(
       system.file("img",
-                  c("tobi.jpg", "xiang.jpg", "frank.jpg", "herzl.jpg", "sigridur.jpg"),
+                  c("tobi.jpg", "xiang.jpg", "frank.jpg", "herzl.jpg", "sigridur.jpg", "anthony.jpg"),
                   package = "postcards"))
 
-    names(img_table) <- c("jolla", "jolla-blue", "trestles", "onofre", "solana")
+    names(img_table) <- c("jolla", "jolla-blue", "trestles", "onofre", "solana", "shiftr")
     file.copy(img_table[[template]], dirname(file))
   }
 
@@ -63,8 +64,8 @@ new_project_create_postcard <- function(path, ...) {
     rstudioapi::initializeProject(path)
   }
 
-  template_table <- as.list(c("jolla", "jolla-blue", "trestles", "onofre", "solana"))
-  names(template_table) <- c("Jolla", "Jolla Blue", "Trestles", "Onofre", "Solana")
+  template_table <- as.list(c("jolla", "jolla-blue", "trestles", "onofre", "solana", "shiftr"))
+  names(template_table) <- c("jolla", "jolla-blue", "trestles", "onofre", "solana", "shiftr")
 
   create_postcard(file.path(path, "index.Rmd"),
                   template = template_table[[params[["template"]]]],

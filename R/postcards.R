@@ -38,6 +38,14 @@ solana <- function(css = NULL, includes = NULL) {
   get_template("solana", css, includes)
 }
 
+#' shiftr website template.
+#'
+#' @inheritParams rmarkdown::html_document
+#' @export
+shiftr <- function(css = NULL, includes = NULL) {
+  get_template("shiftr", css, includes)
+}
+
 get_template <- function(name, css, includes) {
 
   # Must we use "old" templates?
