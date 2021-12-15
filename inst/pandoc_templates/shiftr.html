@@ -7,12 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
+    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <style type="text/css">body {background-color: #3A66B7;font-family: 'Merriweather', serif;color: #FEFEFA;}</style>
 
     <title>$title$</title>
-
+ 
     $if(favicon)$
       <link rel="shortcut icon" href=$favicon$>
     $endif$
@@ -21,6 +21,7 @@
       $header-includes$
     $endfor$
 
+    <!-- style sheet relationship needs to be worked out here-->
     $for(css)$
       <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
     $endfor$
