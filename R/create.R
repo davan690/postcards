@@ -11,9 +11,7 @@
 #' @export
 #' @details
 #' Valid values for the `template` argument include `"jolla"`, `"jolla-blue"`,
-#' `"trestles"`, `"onofre"`, and `"solana"`.
-#' @examples
-#' \dontrun{
+#' `"trestles"`, `"onofre"`,`"solana"`, and `"shiftr"` \dontrun{
 #'
 #' postcards::create_postcard(template = "jolla")
 #' postcards::create_postcard(template = "jolla-blue")
@@ -27,7 +25,6 @@ create_postcard <- function(file = "index.Rmd",
                             create_dir = FALSE,
                             edit = TRUE,
                             create_image = TRUE) {
-
   article <- rmarkdown::draft(
     file,
     template,
@@ -36,21 +33,24 @@ create_postcard <- function(file = "index.Rmd",
     edit = FALSE
   )
 
-  if(create_image) {
+  if (create_image) {
     img_table <- as.list(
       system.file("img",
-                  c("tobi.jpg", "xiang.jpg", "frank.jpg", "herzl.jpg", "sigridur.jpg", "anthony.jpg"),
-                  package = "postcards"))
+        c("tobi.jpg", "xiang.jpg", "frank.jpg", "herzl.jpg", "sigridur.jpg", "anthony.jpg"),
+        package = "postcards"
+      )
+    )
 
     names(img_table) <- c("jolla", "jolla-blue", "trestles", "onofre", "solana", "shiftr")
     file.copy(img_table[[template]], dirname(file))
   }
 
   if (edit) {
-    if (rstudioapi::hasFun("navigateToFile"))
+    if (rstudioapi::hasFun("navigateToFile")) {
       rstudioapi::navigateToFile(file)
-    else
+    } else {
       utils::file.edit(file)
+    }
   }
 
   invisible(article)
@@ -68,6 +68,7 @@ new_project_create_postcard <- function(path, ...) {
   names(template_table) <- c("jolla", "jolla-blue", "trestles", "onofre", "solana", "shiftr")
 
   create_postcard(file.path(path, "index.Rmd"),
-                  template = template_table[[params[["template"]]]],
-                  edit = FALSE)
+    template = template_table[[params[["template"]]]],
+    edit = FALSE
+  )
 }
