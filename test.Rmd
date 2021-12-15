@@ -2,8 +2,8 @@
 title: Anthony Davidson
 image: anthony.jpg
 links:
-  - label: LinkedIn
-    url: 'https://linkedin.com/'
+  - label: facebook
+    url: 'https://facebook.com/'
   - label: Twitter
     url: 'https://twitter.com/'
   - label: GitHub
@@ -11,6 +11,31 @@ links:
   - label: Email
     url: 'mailto:email@email.com'
 output: 'postcards::shiftr'
-lastmod: '2021-12-15T03:17:16.222Z'
+lastmod: '2021-12-15T06:37:45.234Z'
 ---
 
+This template has additional css and html code to allow for centred links and additional boxes for image content or other more detailed content on a single landing page. The additional code achieves the following:
+
+## New Html template
+
+I have added some additional structure to the the original template of jolla-blue as this seemed to be the latest template to be added.
+
+The key bits of the html can be divided in the head, body and footer of the single html document.
+
+## New font
+
+To add some different in the template I have used a new font that can be changed 
+
+*and in the future this will be within the yaml content of future versions*
+
+## Additional yaml content
+
+There are now 3 additional yaml statements that are custom to this template:
+
+We embed a `css` code chunk here.
+
+```{css, echo=FALSE}
+p {
+  font-size: 32px;
+}
+```
