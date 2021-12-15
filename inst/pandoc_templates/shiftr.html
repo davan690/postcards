@@ -1,18 +1,28 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<html lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+		<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
+<head>
+<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <style type="text/css">body {background-color: #3A66B7;font-family: 'Merriweather', serif;color: #FEFEFA;}</style>
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="main.css">
 
-    <title>$title$</title>
- 
+<!-- Wrapper -->
+			<div id="wrapper">
+		<title>$title$</title>
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src = $profileImage$ alt="" /></span>
+						<h1>$subtitle$</h1>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/arjacentprojects" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/arjacentprojects/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="mailto:arjacentprojects@outlook.com" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+
     $if(favicon)$
       <link rel="shortcut icon" href=$favicon$>
     $endif$
@@ -26,10 +36,12 @@
       <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
     $endfor$
 
-  </head>
-  <body>
+  </header>
+</head>
 
-    $for(include-before)$
+  	<body>
+
+		$for(include-before)$
       $include-before$
     $endfor$
 

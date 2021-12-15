@@ -1,6 +1,6 @@
 ---
 title: Anthony Davidson
-image: anthony.jpg
+image: "anthony.jpg"
 links:
   - label: LinkedIn
     url: 'https://linkedin.com/'
@@ -10,7 +10,14 @@ links:
     url: 'https://github.com/'
   - label: Email
     url: 'mailto:email@email.com'
-output: 'postcards::shiftr'
+output: 'postcards::jolla'
 lastmod: '2021-12-15T03:17:16.222Z'
 ---
 
+```{css echo = FALSE}
+	body {
+		background-color: #000;
+		background-image: url("bg.jpg");
+		background-size: cover;
+		background-position: top center;
+	}
