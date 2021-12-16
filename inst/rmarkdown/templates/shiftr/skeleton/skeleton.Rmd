@@ -21,3 +21,5 @@ lastmod: '2021-12-15T03:17:16.222Z'
 		background-size: cover;
 		background-position: top center;
 	}
+```
+
