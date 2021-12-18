@@ -1,4 +1,11 @@
 ---
+title: New `shiftR` template in postcards
+lastmod: '2021-12-16T23:59:39.791Z'
+---
+
+This template has additional css and html code to allow for centred links and additional boxes for image content or other more detailed content on a single landing page. The additional code achieves the following:
+
+```
 title: Anthony Davidson
 image: anthony.jpg
 links:
@@ -13,11 +20,19 @@ links:
 output: 'postcards::shiftr'
 css: main.css
 lastmod: '2021-12-15T06:55:07.097Z'
----
+```
 
-This template has additional css and html code to allow for centred links and additional boxes for image content or other more detailed content on a single landing page. The additional code achieves the following:
+## Original content
 
-## New Html template
+This package is developed from open-source HTML5 webpage called "visualised" however this link and original webpage I found this on is no longer accessable. All credit given where possible here but I am not sure how to track down developer who originally created this content.
+
+The original template is quite complex with resizing and dynamic pop-out boxes all included. TO  begin with this template only includes the static photo boxes as I work through the additional dynamic code within the original template.
+
+As soon as I have this code under my belt I will add this to `v2` of the `shiftR` template.
+
+The basic setup will allow for dynamic boxes relative 
+
+## New `html` template
 
 I have added some additional structure to the the original template of jolla-blue as this seemed to be the latest template to be added.
 
@@ -25,7 +40,7 @@ The key bits of the html can be divided in the head, body and footer of the sing
 
 ## New font
 
-To add some different in the template I have used a new font that can be changed 
+To add some different in the template I have used a new font that can be changed
 
 *and in the future this will be within the yaml content of future versions*
 
