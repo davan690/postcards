@@ -1,22 +1,38 @@
 ---
 title: New `shiftR` template in postcards
-lastmod: '2021-12-16T23:59:39.791Z'
+subtitle: A vignette to help understand the extensions of the shiftr template
+author: Anthony Davidson
+lastmod: '2021-12-19T23:20:23.179Z'
 ---
 
-This template has additional css and html code to allow for centred links and additional boxes for image content or other more detailed content on a single landing page. The additional code achieves the following:
+This template has additional `css` and `html` code to allow for centred social links, logo and background image. Additional boxes for image content or other more detailed content on a single landing page are in development. The additional code has been adding to the yaml headers for this html template in the postcards package.
+
+## Background image
+
+```{css echo = FALSE}
+	body {
+		background-color: #000;
+		background-image: url("bg.jpg");
+		background-size: cover;
+		background-position: top center;
+	}
+```
+
+## Yaml headers
 
 ```
 title: Anthony Davidson
 image: anthony.jpg
+backgroundImage:
 links:
-  - label: facebook
-    url: 'https://facebook.com/'
-  - label: Twitter
-    url: 'https://twitter.com/'
   - label: GitHub
     url: 'https://github.com/'
   - label: Email
     url: 'mailto:email@email.com'
+photos:
+  - image1.png
+  - image2.png
+  - image3.png
 output: 'postcards::shiftr'
 css: main.css
 lastmod: '2021-12-15T06:55:07.097Z'
@@ -30,7 +46,7 @@ The original template is quite complex with resizing and dynamic pop-out boxes a
 
 As soon as I have this code under my belt I will add this to `v2` of the `shiftR` template.
 
-The basic setup will allow for dynamic boxes relative 
+The basic setup will allow for dynamic boxes in the future.
 
 ## New `html` template
 
@@ -44,7 +60,34 @@ To add some different in the template I have used a new font that can be changed
 
 *and in the future this will be within the yaml content of future versions*
 
-## Additional yaml content
+Fonts are two main styles I want to use, 1: The graduate font from google fonts library; and the awesome-icons library that includes the styliest icons for different links and products. To do this I have added the following css and html code to the beginning of the document:
+
+THis is added above head of html document. Additional css can be added to css file or html?
+
+```{html echo = FALSE}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+```
+
+```{css echo = FALSE}
+font-family: 'Graduate', cursive;
+```
+
+Combined together this generates head of....
+
+```
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<style>
+body {
+  font-family: "Audiowide", sans-serif;
+}
+</style>
+</head>
+```
+
+## Additional `yaml` content
 
 There are now 3 additional yaml statements that are custom to this template:
 
@@ -71,7 +114,7 @@ We embed a `css` code chunk here.
 
 	body {
 		background-color: #000;
-		background-image: url("../../images/bg.jpg");
+		background-image: url("bg.jpg");
 		background-size: cover;
 		background-position: top center;
 	}
