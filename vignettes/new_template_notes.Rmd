@@ -1,7 +1,7 @@
 ---
 title: GITflow for new templates
 author: Anthony Davidson
-lastmod: '2021-12-18T00:54:13.907Z'
+lastmod: '2021-12-19T22:51:55.581Z'
 ---
 
 Using github and git version control for developing R packages has many advantages. Here are some quick notes on how I have used a general approach to using git for development called [gitflow]().
@@ -16,4 +16,4 @@ The template I have build using bookdown and rmarkdown for generating dynamic CV
 
 The additional template includes some dynamic image boxes and application of the icon-fonts from google to create contact icons.
 
-These two additional variations on the current templates adds content that extends the basic approach of building single page landing pages for many tasks using R and RMarkdown.
+These two additional variations on the current templates adds content that extends the basic approach of building single page landing pages for many tasks using R and `RMarkdown`.
