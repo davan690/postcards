@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "dynamic_rmd_CV",
-			"path": "../Documents/dynamic_rmd_CV"
 		}
 	],
 	"settings": {}
