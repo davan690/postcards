@@ -55,10 +55,12 @@ postcards::create_postcard(template = "jolla-blue")
 postcards::create_postcard(template = "trestles")
 postcards::create_postcard(template = "onofre")
 postcards::create_postcard(template = "solana")
+postcards::create_postcard(template = "shiftr")
 ```
 
 To compile the self contained HTML file for your site, you can use the **Knit**
 button in RStudio or you can use `rmarkdown::render("index.Rmd")`. 
+
 The HTML file can then be easily deployed to 
 [GitHub Pages](https://pages.github.com/) or
 [Netlify Drop](https://app.netlify.com/drop).

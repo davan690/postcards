@@ -5,6 +5,6 @@ OpenFiles: index.Rmd
 Parameter: template
 Widget: SelectInput
 Label: Which template would you like to use?
-Fields: Jolla, Jolla Blue, Trestles, Onofre, Solana
+Fields: Jolla, Jolla Blue, Trestles, Onofre, Solana, Shiftr
 Default: Jolla
 Position: left
