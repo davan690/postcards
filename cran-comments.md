@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 lastmod: '2021-12-11T02:53:45.477Z'
 ---
@@ -8,11 +9,8 @@ lastmod: '2021-12-11T02:53:45.477Z'
 * Github Actions (macOS): release
 * win-builder: devel
 
+=======
+>>>>>>> 8f92e4ddc048ca02786f997814abe85fc953f5be
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* Days since last update: 1
-
-I was made aware of an implementation error and this
-version (0.2.2) fixes the error.
+0 errors | 0 warnings | 0 notes
